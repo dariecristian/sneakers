@@ -4,8 +4,8 @@ import {Button, Container, Nav, Navbar} from "react-bootstrap";
 import {ADMIN_ROUTE, LOGIN_ROUTE, SHOP_ROUTE} from "../utils/consts";
 import {observer} from "mobx-react-lite";
 import {useNavigate, NavLink} from "react-router-dom";
-import Basket from "../pages/Basket";
-import BasketPreview from "./BasketPreview";
+// import Basket from "../pages/Basket";
+// import BasketPreview from "./BasketPreview";
 
 const NavBar = observer(() => {
     const navigate = useNavigate()
@@ -29,7 +29,7 @@ const NavBar = observer(() => {
                     >
                         <Button variant={"outline-light"} className="ms-3 mt-2" onClick={() => navigate(ADMIN_ROUTE)}>Admin Pannel</Button>
                         {/*<Button variant={"outline-light"} className="ms-3 mt-2" onClick={BasketPreview}>Cart</Button>*/}
-                        <BasketPreview/>
+                        {/* <BasketPreview/>  */}
                         <Button variant={"outline-light"} className="ms-3 mt-2" onClick={() => logOut()}>Log
                             out</Button>
                     </Nav> : <Nav
