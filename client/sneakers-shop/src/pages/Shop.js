@@ -37,7 +37,7 @@ const Shop = observer(() => {
                 <Col md={9}>
                     <BrandBar/>
                     <DeviceList/>
-                    <Pages/>
+                    {/* <Pages/> */}
                 </Col>
             </Row>
         </Container>

@@ -3,9 +3,9 @@ const DataTypes = require("sequelize");
 
 const User = sequelize.define('user', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
-    email: {type: DataTypes.STRING, unique: true},
-    password: {type: DataTypes.STRING},
-    role: {type: DataTypes.STRING, defaultValue: "USER"},
+    email: {type: DataTypes.STRING(50), unique: true},
+    password: {type: DataTypes.STRING(50)},
+    role: {type: DataTypes.STRING(50), defaultValue: "USER"},
 })
 
 const Basket = sequelize.define('basket', {
@@ -18,20 +18,20 @@ const BasketDevice = sequelize.define('basket_device', {
 
 const Device = sequelize.define('device', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
-    name: {type: DataTypes.STRING, unique: true, allowNull: false},
-    price: {type: DataTypes.STRING, allowNull: false},
-    rating: {type: DataTypes.STRING, defaultValue: 0},
-    img: {type: DataTypes.STRING, allowNull: false}
+    name: {type: DataTypes.STRING(50), unique: true, allowNull: false},
+    price: {type: DataTypes.STRING(50), allowNull: false},
+    rating: {type: DataTypes.STRING(50), defaultValue: 0},
+    img: {type: DataTypes.STRING(50), allowNull: false}
 })
 
 const Type = sequelize.define('type', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
-    name: {type: DataTypes.STRING, unique: true, allowNull: false}
+    name: {type: DataTypes.STRING(50), unique: true, allowNull: false}
 })
 
 const Brand = sequelize.define('brand', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
-    name: {type: DataTypes.STRING, unique: true, allowNull: false}
+    name: {type: DataTypes.STRING(50), unique: true, allowNull: false}
 })
 
 const Rating = sequelize.define('rating', {
@@ -41,8 +41,8 @@ const Rating = sequelize.define('rating', {
 
 const DeviceInfo = sequelize.define('device_info', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
-    title: {type: DataTypes.STRING, allowNull: false},
-    description: {type: DataTypes.STRING, allowNull: false}
+    title: {type: DataTypes.STRING(50), allowNull: false},
+    description: {type: DataTypes.STRING(50), allowNull: false}
 })
 
 const TypeBrand = sequelize.define('type_brand', {
